@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Laborator 3 - Stiluri CSS</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    ul li a {
+      display: inline-block;
+      padding: 10px 18px;
+      text-decoration: none;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: opacity 0.2s ease;
+    }
+
+    ul li a:hover {
+      opacity: 0.85;
+    }
+
+    .btn-inline {
+      background-color: #ae22e6; 
+    }
+
+    .btn-internal {
+      background-color: #c174f1;
+    }
+
+    .btn-external {
+      background-color: #6c17bc; 
+    }
+
+
+    .back-link {
+      margin-top: 25px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Laborator 3 - Stiluri CSS</h1>
+
+  <ul>
+    <li><a href="FormtareText_inline.html" class="btn-inline">Stiluri inline</a></li>
+    <li><a href="FormtareText_internal.html" class="btn-internal">Stiluri interne</a></li>
+    <li><a href="FormtareText_external.html" class="btn-external">Stiluri externe</a></li>
+  </ul>
+
+  <p class="back-link"><a href="../index.html"> Laboratoarele mele</a></p>
+
+</body>
+</html>
