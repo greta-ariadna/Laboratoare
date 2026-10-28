@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercitiu Bonus - Contor Bec</title>
+    <script>
+        // Variabila contor declarata in afara functiei 
+        var contor = 0;
+
+        function comutaBec() {
+            var bec = document.getElementById("imagineBec");
+            var textContor = document.getElementById("mesajContor");
+
+            if (bec.src.indexOf("Bec%20stins.gif") !== -1 || bec.src.indexOf("Bec stins.gif") !== -1) {
+                bec.src = "Bec aprins.gif";
+                contor++;
+                textContor.innerHTML = "Becul a fost aprins de " + contor + " ori.";
+            } else {
+                bec.src = "Bec stins.gif";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Comutator Bec cu Contor</h1>
+
+    <p>
+        <img id="imagineBec" 
+             src="Bec stins.gif" 
+             width="100" 
+             height="180" 
+             alt="Bec" 
+             onclick="comutaBec()" 
+             style="cursor: pointer;">
+    </p>
+
+    <p id="mesajContor">Becul a fost aprins de 0 ori.</p>
+
+</body>
+</html>
