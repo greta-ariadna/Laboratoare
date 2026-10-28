@@ -2,19 +2,18 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Exercitiu Bonus - Contor Bec</title>
+    <title>Contor Bec</title>
     <script>
-        // Variabila contor declarata in afara functiei 
         var contor = 0;
 
         function comutaBec() {
             var bec = document.getElementById("imagineBec");
-            var textContor = document.getElementById("mesajContor");
+            var mesaj = document.getElementById("mesaj");
 
-            if (bec.src.indexOf("Bec%20stins.gif") !== -1 || bec.src.indexOf("Bec stins.gif") !== -1) {
+            if (bec.src.match("stins")) {
                 bec.src = "Bec aprins.gif";
                 contor++;
-                textContor.innerHTML = "Becul a fost aprins de " + contor + " ori.";
+                mesaj.innerHTML = "Becul a fost aprins de " + contor + " ori.";
             } else {
                 bec.src = "Bec stins.gif";
             }
@@ -23,7 +22,7 @@
 </head>
 <body>
 
-    <h1>Comutator Bec cu Contor</h1>
+    <h1>Bec cu Contor</h1>
 
     <p>
         <img id="imagineBec" 
@@ -35,7 +34,7 @@
              style="cursor: pointer;">
     </p>
 
-    <p id="mesajContor">Becul a fost aprins de 0 ori.</p>
+    <p id="mesaj">Becul a fost aprins de 0 ori.</p>
 
 </body>
 </html>
